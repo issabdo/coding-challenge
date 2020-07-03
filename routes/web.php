@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/product','ProductController@index')->name('product');
+
+Route::get('api/products','ProductController@getProducts');
+Route::get('api/categorys','CategoryController@getCategorys');
+Route::post('api/products/filter','ProductController@filterProduct');
+
+Route::get('api/getminpriceproduct','ProductController@getMinPriceProduct');
+Route::get('api/getmaxpriceproduct','ProductController@getMaxPriceProduct');
