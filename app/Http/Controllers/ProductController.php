@@ -58,4 +58,25 @@ class ProductController extends Controller
         }
        return $products;
     }
+
+    
+    public function testProductCreate(Request $request){
+
+        // add Product
+        $product = new Product();
+
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->price = $request->price;
+        $product->image = $request->image;
+
+        $product->save();
+
+        if ($product->save()) {
+            response()->json(['success' => 'success'], 200);
+        }else{
+            response()->json(['error' => 'invalid'], 401);
+        }
+
+    }
 }

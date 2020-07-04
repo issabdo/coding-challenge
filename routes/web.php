@@ -25,3 +25,5 @@ Route::post('api/products/filter','ProductController@filterProduct');
 
 Route::get('api/getminpriceproduct','ProductController@getMinPriceProduct');
 Route::get('api/getmaxpriceproduct','ProductController@getMaxPriceProduct');
+
+Route::post('/api/products', 'ProductController@testProductCreate');
