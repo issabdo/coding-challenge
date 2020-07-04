@@ -59,3 +59,7 @@ Run the laravel development server
 From CLI write , and add in the variables
 
     php artisan Productcomm
+
+From Test Unit write ,
+
+    php artisan test
